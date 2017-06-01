@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CfPExecuteService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_ICfPExecuteService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:16498/Drums/CfPExecuteService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:16498/Drums/CfPExecuteService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Server.Utility" />
+      <xsd:import schemaLocation="http://localhost:16498/Drums/CfPExecuteService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:16498/Drums/CfPExecuteService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/LY.MES.Model" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ICfPExecuteService_GetCfPExecute_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCfPExecute" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetCfPExecute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCfPExecuteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetCfPExecute_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q1:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetCfPExecutes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCfPExecutes" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetCfPExecutes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCfPExecutesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetCfPExecutes_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q2:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetDurmsUpFeedingByArrCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDurmsUpFeedingByArrCode" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetDurmsUpFeedingByArrCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDurmsUpFeedingByArrCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetDurmsUpFeedingByArrCode_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q3:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetDurmsUpFeedingByDevCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDurmsUpFeedingByDevCode" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetDurmsUpFeedingByDevCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDurmsUpFeedingByDevCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetDurmsUpFeedingByDevCode_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q4:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetArrangedVouchLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetArrangedVouchLog" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetArrangedVouchLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetArrangedVouchLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetArrangedVouchLog_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q5:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetArrangedVouchLogByCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetArrangedVouchLogByCode" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetArrangedVouchLogByCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetArrangedVouchLogByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetArrangedVouchLogByCode_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q6:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_InsterArrVouchByVw_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsterArrVouchByVw" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_InsterArrVouchByVw_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsterArrVouchByVwResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_InsterArrVouchByVw_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q7:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_InsterArrVouchLog_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsterArrVouchLog" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_InsterArrVouchLog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsterArrVouchLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_InsterArrVouchLog_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q8:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GeCraftsProcessdByWorkbrachName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GeCraftsProcessdByWorkbrachName" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GeCraftsProcessdByWorkbrachName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GeCraftsProcessdByWorkbrachNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GeCraftsProcessdByWorkbrachName_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q9:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetArrangedBySameTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetArrangedBySameTime" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetArrangedBySameTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetArrangedBySameTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetArrangedBySameTime_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q10:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_UpdateArrangedVouchCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateArrangedVouchCode" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_UpdateArrangedVouchCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateArrangedVouchCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_UpdateArrangedVouchCode_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q11:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_UpdateCraftsProcessExecute_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCraftsProcessExecute" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_UpdateCraftsProcessExecute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCraftsProcessExecuteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_UpdateCraftsProcessExecute_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q12:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_Getvw_DurmsUpFeedingByWorkbrachName_InputMessage">
+    <wsdl:part name="parameters" element="tns:Getvw_DurmsUpFeedingByWorkbrachName" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_Getvw_DurmsUpFeedingByWorkbrachName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Getvw_DurmsUpFeedingByWorkbrachNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_Getvw_DurmsUpFeedingByWorkbrachName_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q13:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_UpdateArrangedVouchWeight_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateArrangedVouchWeight" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_UpdateArrangedVouchWeight_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateArrangedVouchWeightResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_UpdateArrangedVouchWeight_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q14:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetArrangedVouchCodeByLicensenNum_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetArrangedVouchCodeByLicensenNum" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetArrangedVouchCodeByLicensenNum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetArrangedVouchCodeByLicensenNumResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetArrangedVouchCodeByLicensenNum_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q15:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetCfPExecuteByArrangedVouchCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCfPExecuteByArrangedVouchCode" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetCfPExecuteByArrangedVouchCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCfPExecuteByArrangedVouchCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetCfPExecuteByArrangedVouchCode_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q16:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_UpdateCraftsProcessByExID_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCraftsProcessByExID" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_UpdateCraftsProcessByExID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCraftsProcessByExIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_UpdateCraftsProcessByExID_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q17:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetPersonByPerCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonByPerCode" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetPersonByPerCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPersonByPerCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetPersonByPerCode_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q18:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetDevStatusByCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDevStatusByCode" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetDevStatusByCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDevStatusByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetDevStatusByCode_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q19:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_UpdateDevWStatusByCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDevWStatusByCode" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_UpdateDevWStatusByCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDevWStatusByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_UpdateDevWStatusByCode_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q20:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_Getvw_DurmsUpFeedingByLnum_InputMessage">
+    <wsdl:part name="parameters" element="tns:Getvw_DurmsUpFeedingByLnum" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_Getvw_DurmsUpFeedingByLnum_OutputMessage">
+    <wsdl:part name="parameters" element="tns:Getvw_DurmsUpFeedingByLnumResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_Getvw_DurmsUpFeedingByLnum_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q21:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetAllIPRegistForm_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllIPRegistForm" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetAllIPRegistForm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllIPRegistFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetAllIPRegistForm_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q22:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_InsterRegistForm_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsterRegistForm" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_InsterRegistForm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsterRegistFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_InsterRegistForm_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q23:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_UpdateRegistForm_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRegistForm" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_UpdateRegistForm_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateRegistFormResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_UpdateRegistForm_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q24:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_DeleteRegistFormById_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRegistFormById" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_DeleteRegistFormById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteRegistFormByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetArrCuteByArrCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetArrCuteByArrCode" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetArrCuteByArrCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetArrCuteByArrCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_GetArrCuteByArrCode_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q25:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_InsterCraProDataById_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsterCraProDataById" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_InsterCraProDataById_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsterCraProDataByIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_InsterCraProDataById_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q26:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_UpdateCraftsProcessData_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCraftsProcessData" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_UpdateCraftsProcessData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateCraftsProcessDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="ICfPExecuteService_UpdateCraftsProcessData_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q27:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:portType name="ICfPExecuteService">
+    <wsdl:operation name="GetCfPExecute">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICfPExecuteService/GetCfPExecute" message="tns:ICfPExecuteService_GetCfPExecute_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICfPExecuteService/GetCfPExecuteResponse" message="tns:ICfPExecuteService_GetCfPExecute_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICfPExecuteService/GetCfPExecuteCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:ICfPExecuteService_GetCfPExecute_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCfPExecutes">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICfPExecuteService/GetCfPExecutes" message="tns:ICfPExecuteService_GetCfPExecutes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICfPExecuteService/GetCfPExecutesResponse" message="tns:ICfPExecuteService_GetCfPExecutes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICfPExecuteService/GetCfPExecutesCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:ICfPExecuteService_GetCfPExecutes_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDurmsUpFeedingByArrCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICfPExecuteService/GetDurmsUpFeedingByArrCode" message="tns:ICfPExecuteService_GetDurmsUpFeedingByArrCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICfPExecuteService/GetDurmsUpFeedingByArrCodeResponse" message="tns:ICfPExecuteService_GetDurmsUpFeedingByArrCode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICfPExecuteService/GetDurmsUpFeedingByArrCodeCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:ICfPExecuteService_GetDurmsUpFeedingByArrCode_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDurmsUpFeedingByDevCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICfPExecuteService/GetDurmsUpFeedingByDevCode" message="tns:ICfPExecuteService_GetDurmsUpFeedingByDevCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICfPExecuteService/GetDurmsUpFeedingByDevCodeResponse" message="tns:ICfPExecuteService_GetDurmsUpFeedingByDevCode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICfPExecuteService/GetDurmsUpFeedingByDevCodeCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:ICfPExecuteService_GetDurmsUpFeedingByDevCode_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetArrangedVouchLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICfPExecuteService/GetArrangedVouchLog" message="tns:ICfPExecuteService_GetArrangedVouchLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICfPExecuteService/GetArrangedVouchLogResponse" message="tns:ICfPExecuteService_GetArrangedVouchLog_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICfPExecuteService/GetArrangedVouchLogCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:ICfPExecuteService_GetArrangedVouchLog_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetArrangedVouchLogByCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICfPExecuteService/GetArrangedVouchLogByCode" message="tns:ICfPExecuteService_GetArrangedVouchLogByCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICfPExecuteService/GetArrangedVouchLogByCodeResponse" message="tns:ICfPExecuteService_GetArrangedVouchLogByCode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICfPExecuteService/GetArrangedVouchLogByCodeCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:ICfPExecuteService_GetArrangedVouchLogByCode_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsterArrVouchByVw">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICfPExecuteService/InsterArrVouchByVw" message="tns:ICfPExecuteService_InsterArrVouchByVw_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICfPExecuteService/InsterArrVouchByVwResponse" message="tns:ICfPExecuteService_InsterArrVouchByVw_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICfPExecuteService/InsterArrVouchByVwCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:ICfPExecuteService_InsterArrVouchByVw_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsterArrVouchLog">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICfPExecuteService/InsterArrVouchLog" message="tns:ICfPExecuteService_InsterArrVouchLog_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICfPExecuteService/InsterArrVouchLogResponse" message="tns:ICfPExecuteService_InsterArrVouchLog_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICfPExecuteService/InsterArrVouchLogCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:ICfPExecuteService_InsterArrVouchLog_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GeCraftsProcessdByWorkbrachName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICfPExecuteService/GeCraftsProcessdByWorkbrachName" message="tns:ICfPExecuteService_GeCraftsProcessdByWorkbrachName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICfPExecuteService/GeCraftsProcessdByWorkbrachNameResponse" message="tns:ICfPExecuteService_GeCraftsProcessdByWorkbrachName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICfPExecuteService/GeCraftsProcessdByWorkbrachNameCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:ICfPExecuteService_GeCraftsProcessdByWorkbrachName_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetArrangedBySameTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICfPExecuteService/GetArrangedBySameTime" message="tns:ICfPExecuteService_GetArrangedBySameTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICfPExecuteService/GetArrangedBySameTimeResponse" message="tns:ICfPExecuteService_GetArrangedBySameTime_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICfPExecuteService/GetArrangedBySameTimeCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:ICfPExecuteService_GetArrangedBySameTime_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateArrangedVouchCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICfPExecuteService/UpdateArrangedVouchCode" message="tns:ICfPExecuteService_UpdateArrangedVouchCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICfPExecuteService/UpdateArrangedVouchCodeResponse" message="tns:ICfPExecuteService_UpdateArrangedVouchCode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICfPExecuteService/UpdateArrangedVouchCodeCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:ICfPExecuteService_UpdateArrangedVouchCode_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCraftsProcessExecute">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICfPExecuteService/UpdateCraftsProcessExecute" message="tns:ICfPExecuteService_UpdateCraftsProcessExecute_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICfPExecuteService/UpdateCraftsProcessExecuteResponse" message="tns:ICfPExecuteService_UpdateCraftsProcessExecute_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICfPExecuteService/UpdateCraftsProcessExecuteCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:ICfPExecuteService_UpdateCraftsProcessExecute_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Getvw_DurmsUpFeedingByWorkbrachName">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICfPExecuteService/Getvw_DurmsUpFeedingByWorkbrachName" message="tns:ICfPExecuteService_Getvw_DurmsUpFeedingByWorkbrachName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICfPExecuteService/Getvw_DurmsUpFeedingByWorkbrachNameResponse" message="tns:ICfPExecuteService_Getvw_DurmsUpFeedingByWorkbrachName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICfPExecuteService/Getvw_DurmsUpFeedingByWorkbrachNameCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:ICfPExecuteService_Getvw_DurmsUpFeedingByWorkbrachName_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateArrangedVouchWeight">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICfPExecuteService/UpdateArrangedVouchWeight" message="tns:ICfPExecuteService_UpdateArrangedVouchWeight_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICfPExecuteService/UpdateArrangedVouchWeightResponse" message="tns:ICfPExecuteService_UpdateArrangedVouchWeight_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICfPExecuteService/UpdateArrangedVouchWeightCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:ICfPExecuteService_UpdateArrangedVouchWeight_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetArrangedVouchCodeByLicensenNum">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICfPExecuteService/GetArrangedVouchCodeByLicensenNum" message="tns:ICfPExecuteService_GetArrangedVouchCodeByLicensenNum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICfPExecuteService/GetArrangedVouchCodeByLicensenNumResponse" message="tns:ICfPExecuteService_GetArrangedVouchCodeByLicensenNum_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICfPExecuteService/GetArrangedVouchCodeByLicensenNumCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:ICfPExecuteService_GetArrangedVouchCodeByLicensenNum_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCfPExecuteByArrangedVouchCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICfPExecuteService/GetCfPExecuteByArrangedVouchCode" message="tns:ICfPExecuteService_GetCfPExecuteByArrangedVouchCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICfPExecuteService/GetCfPExecuteByArrangedVouchCodeResponse" message="tns:ICfPExecuteService_GetCfPExecuteByArrangedVouchCode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICfPExecuteService/GetCfPExecuteByArrangedVouchCodeCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:ICfPExecuteService_GetCfPExecuteByArrangedVouchCode_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCraftsProcessByExID">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICfPExecuteService/UpdateCraftsProcessByExID" message="tns:ICfPExecuteService_UpdateCraftsProcessByExID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICfPExecuteService/UpdateCraftsProcessByExIDResponse" message="tns:ICfPExecuteService_UpdateCraftsProcessByExID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICfPExecuteService/UpdateCraftsProcessByExIDCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:ICfPExecuteService_UpdateCraftsProcessByExID_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonByPerCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICfPExecuteService/GetPersonByPerCode" message="tns:ICfPExecuteService_GetPersonByPerCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICfPExecuteService/GetPersonByPerCodeResponse" message="tns:ICfPExecuteService_GetPersonByPerCode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICfPExecuteService/GetPersonByPerCodeCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:ICfPExecuteService_GetPersonByPerCode_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDevStatusByCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICfPExecuteService/GetDevStatusByCode" message="tns:ICfPExecuteService_GetDevStatusByCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICfPExecuteService/GetDevStatusByCodeResponse" message="tns:ICfPExecuteService_GetDevStatusByCode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICfPExecuteService/GetDevStatusByCodeCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:ICfPExecuteService_GetDevStatusByCode_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDevWStatusByCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICfPExecuteService/UpdateDevWStatusByCode" message="tns:ICfPExecuteService_UpdateDevWStatusByCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICfPExecuteService/UpdateDevWStatusByCodeResponse" message="tns:ICfPExecuteService_UpdateDevWStatusByCode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICfPExecuteService/UpdateDevWStatusByCodeCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:ICfPExecuteService_UpdateDevWStatusByCode_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Getvw_DurmsUpFeedingByLnum">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICfPExecuteService/Getvw_DurmsUpFeedingByLnum" message="tns:ICfPExecuteService_Getvw_DurmsUpFeedingByLnum_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICfPExecuteService/Getvw_DurmsUpFeedingByLnumResponse" message="tns:ICfPExecuteService_Getvw_DurmsUpFeedingByLnum_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICfPExecuteService/Getvw_DurmsUpFeedingByLnumCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:ICfPExecuteService_Getvw_DurmsUpFeedingByLnum_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllIPRegistForm">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICfPExecuteService/GetAllIPRegistForm" message="tns:ICfPExecuteService_GetAllIPRegistForm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICfPExecuteService/GetAllIPRegistFormResponse" message="tns:ICfPExecuteService_GetAllIPRegistForm_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICfPExecuteService/GetAllIPRegistFormCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:ICfPExecuteService_GetAllIPRegistForm_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsterRegistForm">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICfPExecuteService/InsterRegistForm" message="tns:ICfPExecuteService_InsterRegistForm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICfPExecuteService/InsterRegistFormResponse" message="tns:ICfPExecuteService_InsterRegistForm_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICfPExecuteService/InsterRegistFormCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:ICfPExecuteService_InsterRegistForm_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRegistForm">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICfPExecuteService/UpdateRegistForm" message="tns:ICfPExecuteService_UpdateRegistForm_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICfPExecuteService/UpdateRegistFormResponse" message="tns:ICfPExecuteService_UpdateRegistForm_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICfPExecuteService/UpdateRegistFormCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:ICfPExecuteService_UpdateRegistForm_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRegistFormById">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICfPExecuteService/DeleteRegistFormById" message="tns:ICfPExecuteService_DeleteRegistFormById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICfPExecuteService/DeleteRegistFormByIdResponse" message="tns:ICfPExecuteService_DeleteRegistFormById_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetArrCuteByArrCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICfPExecuteService/GetArrCuteByArrCode" message="tns:ICfPExecuteService_GetArrCuteByArrCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICfPExecuteService/GetArrCuteByArrCodeResponse" message="tns:ICfPExecuteService_GetArrCuteByArrCode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICfPExecuteService/GetArrCuteByArrCodeCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:ICfPExecuteService_GetArrCuteByArrCode_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsterCraProDataById">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICfPExecuteService/InsterCraProDataById" message="tns:ICfPExecuteService_InsterCraProDataById_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICfPExecuteService/InsterCraProDataByIdResponse" message="tns:ICfPExecuteService_InsterCraProDataById_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICfPExecuteService/InsterCraProDataByIdCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:ICfPExecuteService_InsterCraProDataById_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCraftsProcessData">
+      <wsdl:input wsaw:Action="http://tempuri.org/ICfPExecuteService/UpdateCraftsProcessData" message="tns:ICfPExecuteService_UpdateCraftsProcessData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ICfPExecuteService/UpdateCraftsProcessDataResponse" message="tns:ICfPExecuteService_UpdateCraftsProcessData_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/ICfPExecuteService/UpdateCraftsProcessDataCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:ICfPExecuteService_UpdateCraftsProcessData_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_ICfPExecuteService" type="tns:ICfPExecuteService">
+    <wsp:PolicyReference URI="#WSHttpBinding_ICfPExecuteService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCfPExecute">
+      <soap12:operation soapAction="http://tempuri.org/ICfPExecuteService/GetCfPExecute" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCfPExecutes">
+      <soap12:operation soapAction="http://tempuri.org/ICfPExecuteService/GetCfPExecutes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDurmsUpFeedingByArrCode">
+      <soap12:operation soapAction="http://tempuri.org/ICfPExecuteService/GetDurmsUpFeedingByArrCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDurmsUpFeedingByDevCode">
+      <soap12:operation soapAction="http://tempuri.org/ICfPExecuteService/GetDurmsUpFeedingByDevCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetArrangedVouchLog">
+      <soap12:operation soapAction="http://tempuri.org/ICfPExecuteService/GetArrangedVouchLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetArrangedVouchLogByCode">
+      <soap12:operation soapAction="http://tempuri.org/ICfPExecuteService/GetArrangedVouchLogByCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsterArrVouchByVw">
+      <soap12:operation soapAction="http://tempuri.org/ICfPExecuteService/InsterArrVouchByVw" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsterArrVouchLog">
+      <soap12:operation soapAction="http://tempuri.org/ICfPExecuteService/InsterArrVouchLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GeCraftsProcessdByWorkbrachName">
+      <soap12:operation soapAction="http://tempuri.org/ICfPExecuteService/GeCraftsProcessdByWorkbrachName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetArrangedBySameTime">
+      <soap12:operation soapAction="http://tempuri.org/ICfPExecuteService/GetArrangedBySameTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateArrangedVouchCode">
+      <soap12:operation soapAction="http://tempuri.org/ICfPExecuteService/UpdateArrangedVouchCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCraftsProcessExecute">
+      <soap12:operation soapAction="http://tempuri.org/ICfPExecuteService/UpdateCraftsProcessExecute" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Getvw_DurmsUpFeedingByWorkbrachName">
+      <soap12:operation soapAction="http://tempuri.org/ICfPExecuteService/Getvw_DurmsUpFeedingByWorkbrachName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateArrangedVouchWeight">
+      <soap12:operation soapAction="http://tempuri.org/ICfPExecuteService/UpdateArrangedVouchWeight" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetArrangedVouchCodeByLicensenNum">
+      <soap12:operation soapAction="http://tempuri.org/ICfPExecuteService/GetArrangedVouchCodeByLicensenNum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetCfPExecuteByArrangedVouchCode">
+      <soap12:operation soapAction="http://tempuri.org/ICfPExecuteService/GetCfPExecuteByArrangedVouchCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCraftsProcessByExID">
+      <soap12:operation soapAction="http://tempuri.org/ICfPExecuteService/UpdateCraftsProcessByExID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetPersonByPerCode">
+      <soap12:operation soapAction="http://tempuri.org/ICfPExecuteService/GetPersonByPerCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDevStatusByCode">
+      <soap12:operation soapAction="http://tempuri.org/ICfPExecuteService/GetDevStatusByCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDevWStatusByCode">
+      <soap12:operation soapAction="http://tempuri.org/ICfPExecuteService/UpdateDevWStatusByCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="Getvw_DurmsUpFeedingByLnum">
+      <soap12:operation soapAction="http://tempuri.org/ICfPExecuteService/Getvw_DurmsUpFeedingByLnum" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllIPRegistForm">
+      <soap12:operation soapAction="http://tempuri.org/ICfPExecuteService/GetAllIPRegistForm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsterRegistForm">
+      <soap12:operation soapAction="http://tempuri.org/ICfPExecuteService/InsterRegistForm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateRegistForm">
+      <soap12:operation soapAction="http://tempuri.org/ICfPExecuteService/UpdateRegistForm" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteRegistFormById">
+      <soap12:operation soapAction="http://tempuri.org/ICfPExecuteService/DeleteRegistFormById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetArrCuteByArrCode">
+      <soap12:operation soapAction="http://tempuri.org/ICfPExecuteService/GetArrCuteByArrCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="InsterCraProDataById">
+      <soap12:operation soapAction="http://tempuri.org/ICfPExecuteService/InsterCraProDataById" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateCraftsProcessData">
+      <soap12:operation soapAction="http://tempuri.org/ICfPExecuteService/UpdateCraftsProcessData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CfPExecuteService">
+    <wsdl:port name="WSHttpBinding_ICfPExecuteService" binding="tns:WSHttpBinding_ICfPExecuteService">
+      <soap12:address location="http://localhost:16498/Drums/CfPExecuteService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost:16498/Drums/CfPExecuteService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/LY.MES.Model" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LY.MES.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfDeviceExecute">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DeviceExecute" nillable="true" type="tns:DeviceExecute" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDeviceExecute" nillable="true" type="tns:ArrayOfDeviceExecute" />
+  <xs:complexType name="DeviceExecute">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CollFrequency" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CreatePerson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DevCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeveCode" type="xs:int" />
+      <xs:element minOccurs="0" name="DeviCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DevpCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LastDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="LastPerson" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UserStatus" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DeviceExecute" nillable="true" type="tns:DeviceExecute" />
+  <xs:complexType name="ArrayOfV_DV_DevExecute">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="V_DV_DevExecute" nillable="true" type="tns:V_DV_DevExecute" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfV_DV_DevExecute" nillable="true" type="tns:ArrayOfV_DV_DevExecute" />
+  <xs:complexType name="V_DV_DevExecute">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BaudRate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CallID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="CheckBit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CollFrequency" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ConAccAddress" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ConvertType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataBit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DevCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DevName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DevStd" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeviCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeviName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeviceId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DevpAddress" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="DevpCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DevpName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="EquipStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="ExecuteID" type="xs:int" />
+      <xs:element minOccurs="0" name="IPUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InterFaceStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="LocalAddress" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaxValue" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="MinValue" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="Port" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="SendFormat" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerialPort" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StandardValue" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="StopBit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="WorkStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="ZGCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZGName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="V_DV_DevExecute" nillable="true" type="tns:V_DV_DevExecute" />
+</xs:schema>

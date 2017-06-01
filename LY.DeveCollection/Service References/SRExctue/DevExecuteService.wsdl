@@ -1,0 +1,469 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DevExecuteService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IDevExecuteService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:16498/DataColl/DevExecuteService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:16498/DataColl/DevExecuteService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Server.Utility" />
+      <xsd:import schemaLocation="http://localhost:16498/DataColl/DevExecuteService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:16498/DataColl/DevExecuteService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/LY.MES.Model" />
+      <xsd:import schemaLocation="http://localhost:16498/DataColl/DevExecuteService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:16498/DataColl/DevExecuteService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IDevExecuteService_DoWork_InputMessage">
+    <wsdl:part name="parameters" element="tns:DoWork" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_DoWork_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetDeviceExecuteList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeviceExecuteList" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetDeviceExecuteList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeviceExecuteListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetDeviceExecuteList_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q1:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetDevViewList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDevViewList" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetDevViewList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDevViewListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetDevViewList_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q2:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetDevViewListByAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDevViewListByAddress" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetDevViewListByAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDevViewListByAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetDevViewListByAddress_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q3:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetDevViewListByZGName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDevViewListByZGName" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetDevViewListByZGName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDevViewListByZGNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetDevViewListByZGName_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q4:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetDevViewListAllAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDevViewListAllAddress" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetDevViewListAllAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDevViewListAllAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetDevViewListAllAddress_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q5:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetDevViewListAllDevName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDevViewListAllDevName" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetDevViewListAllDevName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDevViewListAllDevNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetDevViewListAllDevName_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q6:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetDevViewListAllIP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDevViewListAllIP" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetDevViewListAllIP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDevViewListAllIPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetDevViewListAllIP_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q7:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetDeviceExecuteByID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeviceExecuteByID" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetDeviceExecuteByID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeviceExecuteByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetDeviceExecuteByID_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q8:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetDeviceExecuteByDevCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeviceExecuteByDevCode" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetDeviceExecuteByDevCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeviceExecuteByDevCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetDeviceExecuteByDevCode_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q9:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetDeviceExecute_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeviceExecute" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetDeviceExecute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeviceExecuteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetDeviceExecute_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q10:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_AddDeviceExecute_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddDeviceExecute" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_AddDeviceExecute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddDeviceExecuteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_AddDeviceExecute_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q11:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_UpdateDeviceExecute_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDeviceExecute" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_UpdateDeviceExecute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateDeviceExecuteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_UpdateDeviceExecute_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q12:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_DelDeviceExecute_InputMessage">
+    <wsdl:part name="parameters" element="tns:DelDeviceExecute" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_DelDeviceExecute_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DelDeviceExecuteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_DelDeviceExecute_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q13:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetDevExecutePagedList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDevExecutePagedList" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetDevExecutePagedList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDevExecutePagedListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetDevExecutePagedList_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q14:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetViewExecIDByDeviName_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetViewExecIDByDeviName" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetViewExecIDByDeviName_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetViewExecIDByDeviNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetViewExecIDByDeviName_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q15:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetViewExecIDByIrcon_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetViewExecIDByIrcon" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetViewExecIDByIrcon_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetViewExecIDByIrconResponse" />
+  </wsdl:message>
+  <wsdl:message name="IDevExecuteService_GetViewExecIDByIrcon_CustomFaultMessageFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/Server.Utility" name="detail" element="q16:CustomFaultMessage" />
+  </wsdl:message>
+  <wsdl:portType name="IDevExecuteService">
+    <wsdl:operation name="DoWork">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDevExecuteService/DoWork" message="tns:IDevExecuteService_DoWork_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDevExecuteService/DoWorkResponse" message="tns:IDevExecuteService_DoWork_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeviceExecuteList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDevExecuteService/GetDeviceExecuteList" message="tns:IDevExecuteService_GetDeviceExecuteList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDevExecuteService/GetDeviceExecuteListResponse" message="tns:IDevExecuteService_GetDeviceExecuteList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDevExecuteService/GetDeviceExecuteListCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDevExecuteService_GetDeviceExecuteList_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDevViewList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDevExecuteService/GetDevViewList" message="tns:IDevExecuteService_GetDevViewList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDevExecuteService/GetDevViewListResponse" message="tns:IDevExecuteService_GetDevViewList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDevExecuteService/GetDevViewListCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDevExecuteService_GetDevViewList_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDevViewListByAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDevExecuteService/GetDevViewListByAddress" message="tns:IDevExecuteService_GetDevViewListByAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDevExecuteService/GetDevViewListByAddressResponse" message="tns:IDevExecuteService_GetDevViewListByAddress_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDevExecuteService/GetDevViewListByAddressCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDevExecuteService_GetDevViewListByAddress_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDevViewListByZGName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDevExecuteService/GetDevViewListByZGName" message="tns:IDevExecuteService_GetDevViewListByZGName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDevExecuteService/GetDevViewListByZGNameResponse" message="tns:IDevExecuteService_GetDevViewListByZGName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDevExecuteService/GetDevViewListByZGNameCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDevExecuteService_GetDevViewListByZGName_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDevViewListAllAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDevExecuteService/GetDevViewListAllAddress" message="tns:IDevExecuteService_GetDevViewListAllAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDevExecuteService/GetDevViewListAllAddressResponse" message="tns:IDevExecuteService_GetDevViewListAllAddress_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDevExecuteService/GetDevViewListAllAddressCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDevExecuteService_GetDevViewListAllAddress_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDevViewListAllDevName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDevExecuteService/GetDevViewListAllDevName" message="tns:IDevExecuteService_GetDevViewListAllDevName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDevExecuteService/GetDevViewListAllDevNameResponse" message="tns:IDevExecuteService_GetDevViewListAllDevName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDevExecuteService/GetDevViewListAllDevNameCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDevExecuteService_GetDevViewListAllDevName_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDevViewListAllIP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDevExecuteService/GetDevViewListAllIP" message="tns:IDevExecuteService_GetDevViewListAllIP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDevExecuteService/GetDevViewListAllIPResponse" message="tns:IDevExecuteService_GetDevViewListAllIP_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDevExecuteService/GetDevViewListAllIPCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDevExecuteService_GetDevViewListAllIP_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeviceExecuteByID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDevExecuteService/GetDeviceExecuteByID" message="tns:IDevExecuteService_GetDeviceExecuteByID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDevExecuteService/GetDeviceExecuteByIDResponse" message="tns:IDevExecuteService_GetDeviceExecuteByID_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDevExecuteService/GetDeviceExecuteByIDCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDevExecuteService_GetDeviceExecuteByID_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeviceExecuteByDevCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDevExecuteService/GetDeviceExecuteByDevCode" message="tns:IDevExecuteService_GetDeviceExecuteByDevCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDevExecuteService/GetDeviceExecuteByDevCodeResponse" message="tns:IDevExecuteService_GetDeviceExecuteByDevCode_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDevExecuteService/GetDeviceExecuteByDevCodeCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDevExecuteService_GetDeviceExecuteByDevCode_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeviceExecute">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDevExecuteService/GetDeviceExecute" message="tns:IDevExecuteService_GetDeviceExecute_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDevExecuteService/GetDeviceExecuteResponse" message="tns:IDevExecuteService_GetDeviceExecute_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDevExecuteService/GetDeviceExecuteCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDevExecuteService_GetDeviceExecute_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDeviceExecute">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDevExecuteService/AddDeviceExecute" message="tns:IDevExecuteService_AddDeviceExecute_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDevExecuteService/AddDeviceExecuteResponse" message="tns:IDevExecuteService_AddDeviceExecute_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDevExecuteService/AddDeviceExecuteCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDevExecuteService_AddDeviceExecute_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceExecute">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDevExecuteService/UpdateDeviceExecute" message="tns:IDevExecuteService_UpdateDeviceExecute_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDevExecuteService/UpdateDeviceExecuteResponse" message="tns:IDevExecuteService_UpdateDeviceExecute_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDevExecuteService/UpdateDeviceExecuteCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDevExecuteService_UpdateDeviceExecute_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DelDeviceExecute">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDevExecuteService/DelDeviceExecute" message="tns:IDevExecuteService_DelDeviceExecute_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDevExecuteService/DelDeviceExecuteResponse" message="tns:IDevExecuteService_DelDeviceExecute_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDevExecuteService/DelDeviceExecuteCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDevExecuteService_DelDeviceExecute_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDevExecutePagedList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDevExecuteService/GetDevExecutePagedList" message="tns:IDevExecuteService_GetDevExecutePagedList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDevExecuteService/GetDevExecutePagedListResponse" message="tns:IDevExecuteService_GetDevExecutePagedList_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDevExecuteService/GetDevExecutePagedListCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDevExecuteService_GetDevExecutePagedList_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetViewExecIDByDeviName">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDevExecuteService/GetViewExecIDByDeviName" message="tns:IDevExecuteService_GetViewExecIDByDeviName_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDevExecuteService/GetViewExecIDByDeviNameResponse" message="tns:IDevExecuteService_GetViewExecIDByDeviName_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDevExecuteService/GetViewExecIDByDeviNameCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDevExecuteService_GetViewExecIDByDeviName_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetViewExecIDByIrcon">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDevExecuteService/GetViewExecIDByIrcon" message="tns:IDevExecuteService_GetViewExecIDByIrcon_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDevExecuteService/GetViewExecIDByIrconResponse" message="tns:IDevExecuteService_GetViewExecIDByIrcon_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IDevExecuteService/GetViewExecIDByIrconCustomFaultMessageFault" name="CustomFaultMessageFault" message="tns:IDevExecuteService_GetViewExecIDByIrcon_CustomFaultMessageFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IDevExecuteService" type="tns:IDevExecuteService">
+    <wsp:PolicyReference URI="#WSHttpBinding_IDevExecuteService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DoWork">
+      <soap12:operation soapAction="http://tempuri.org/IDevExecuteService/DoWork" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeviceExecuteList">
+      <soap12:operation soapAction="http://tempuri.org/IDevExecuteService/GetDeviceExecuteList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDevViewList">
+      <soap12:operation soapAction="http://tempuri.org/IDevExecuteService/GetDevViewList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDevViewListByAddress">
+      <soap12:operation soapAction="http://tempuri.org/IDevExecuteService/GetDevViewListByAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDevViewListByZGName">
+      <soap12:operation soapAction="http://tempuri.org/IDevExecuteService/GetDevViewListByZGName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDevViewListAllAddress">
+      <soap12:operation soapAction="http://tempuri.org/IDevExecuteService/GetDevViewListAllAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDevViewListAllDevName">
+      <soap12:operation soapAction="http://tempuri.org/IDevExecuteService/GetDevViewListAllDevName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDevViewListAllIP">
+      <soap12:operation soapAction="http://tempuri.org/IDevExecuteService/GetDevViewListAllIP" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeviceExecuteByID">
+      <soap12:operation soapAction="http://tempuri.org/IDevExecuteService/GetDeviceExecuteByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeviceExecuteByDevCode">
+      <soap12:operation soapAction="http://tempuri.org/IDevExecuteService/GetDeviceExecuteByDevCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeviceExecute">
+      <soap12:operation soapAction="http://tempuri.org/IDevExecuteService/GetDeviceExecute" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="AddDeviceExecute">
+      <soap12:operation soapAction="http://tempuri.org/IDevExecuteService/AddDeviceExecute" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateDeviceExecute">
+      <soap12:operation soapAction="http://tempuri.org/IDevExecuteService/UpdateDeviceExecute" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="DelDeviceExecute">
+      <soap12:operation soapAction="http://tempuri.org/IDevExecuteService/DelDeviceExecute" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetDevExecutePagedList">
+      <soap12:operation soapAction="http://tempuri.org/IDevExecuteService/GetDevExecutePagedList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetViewExecIDByDeviName">
+      <soap12:operation soapAction="http://tempuri.org/IDevExecuteService/GetViewExecIDByDeviName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="GetViewExecIDByIrcon">
+      <soap12:operation soapAction="http://tempuri.org/IDevExecuteService/GetViewExecIDByIrcon" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CustomFaultMessageFault">
+        <soap12:fault use="literal" name="CustomFaultMessageFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DevExecuteService">
+    <wsdl:port name="WSHttpBinding_IDevExecuteService" binding="tns:WSHttpBinding_IDevExecuteService">
+      <soap12:address location="http://localhost:16498/DataColl/DevExecuteService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost:16498/DataColl/DevExecuteService.svc</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

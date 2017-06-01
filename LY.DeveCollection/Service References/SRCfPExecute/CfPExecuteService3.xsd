@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:16498/Drums/CfPExecuteService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Server.Utility" />
+  <xs:import schemaLocation="http://localhost:16498/Drums/CfPExecuteService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/LY.MES.Model" />
+  <xs:element name="GetCfPExecute">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ExecuteID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCfPExecuteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="GetCfPExecuteResult" nillable="true" type="q1:CommonResultOfCraftsProcessExecuteCraftsProcessExecuteDetail7Kpb7GJA" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCfPExecutes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ArrangedVouchCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCfPExecutesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="GetCfPExecutesResult" nillable="true" type="q2:CommonResultOfArrayOfCraftsProcessExecutedYMi5huk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDurmsUpFeedingByArrCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ArrangedVouchCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDurmsUpFeedingByArrCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="GetDurmsUpFeedingByArrCodeResult" nillable="true" type="q3:CommonResultOfArrayOfvw_DurmsUpFeedingdYMi5huk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDurmsUpFeedingByDevCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DevCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDurmsUpFeedingByDevCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="GetDurmsUpFeedingByDevCodeResult" nillable="true" type="q4:CommonResultOfArrayOfvw_DurmsUpFeedingdYMi5huk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArrangedVouchLog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArrangedVouchLogResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="GetArrangedVouchLogResult" nillable="true" type="q5:CommonResultOfArrayOfArrangedVouchLogdYMi5huk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArrangedVouchLogByCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ArrangedVouchCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArrangedVouchLogByCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="GetArrangedVouchLogByCodeResult" nillable="true" type="q6:CommonResultOfArrayOfArrangedVouchLogdYMi5huk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsterArrVouchByVw">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/LY.MES.Model" minOccurs="0" name="model" nillable="true" type="q7:vw_DurmsUpFeeding" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsterArrVouchByVwResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="InsterArrVouchByVwResult" nillable="true" type="q8:CommonResultOfArrangedVouchdYMi5huk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsterArrVouchLog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/LY.MES.Model" minOccurs="0" name="model" nillable="true" type="q9:ArrangedVouchLog" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsterArrVouchLogResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="InsterArrVouchLogResult" nillable="true" type="q10:CommonResultOfArrangedVouchLogdYMi5huk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GeCraftsProcessdByWorkbrachName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="WorkbrachName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GeCraftsProcessdByWorkbrachNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="GeCraftsProcessdByWorkbrachNameResult" nillable="true" type="q11:CommonResultOfCraftsProcessExecutedYMi5huk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArrangedBySameTime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArrangedBySameTimeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="GetArrangedBySameTimeResult" nillable="true" type="q12:CommonResultOfArrangedVouchdYMi5huk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateArrangedVouchCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/LY.MES.Model" minOccurs="0" name="model" nillable="true" type="q13:vw_DurmsUpFeeding" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateArrangedVouchCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="UpdateArrangedVouchCodeResult" nillable="true" type="q14:CommonResultOfArrangedVouchdYMi5huk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCraftsProcessExecute">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ArrangedVouchCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="Order" type="xs:int" />
+        <xs:element minOccurs="0" name="ExecuteStatus" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCraftsProcessExecuteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="UpdateCraftsProcessExecuteResult" nillable="true" type="q15:CommonResultOfCraftsProcessExecutedYMi5huk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Getvw_DurmsUpFeedingByWorkbrachName">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="WorkbrachName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Getvw_DurmsUpFeedingByWorkbrachNameResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="Getvw_DurmsUpFeedingByWorkbrachNameResult" nillable="true" type="q16:CommonResultOfvw_DurmsUpFeedingdYMi5huk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateArrangedVouchWeight">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/LY.MES.Model" minOccurs="0" name="model" nillable="true" type="q17:vw_DurmsUpFeeding" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateArrangedVouchWeightResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="UpdateArrangedVouchWeightResult" nillable="true" type="q18:CommonResultOfArrangedVouchdYMi5huk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArrangedVouchCodeByLicensenNum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LicenseNum" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArrangedVouchCodeByLicensenNumResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="GetArrangedVouchCodeByLicensenNumResult" nillable="true" type="q19:CommonResultOfArrangedVouchdYMi5huk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCfPExecuteByArrangedVouchCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ArrangedVouchCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCfPExecuteByArrangedVouchCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="GetCfPExecuteByArrangedVouchCodeResult" nillable="true" type="q20:CommonResultOfCraftsProcessExecutedYMi5huk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCraftsProcessByExID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ArrangedVouchCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ExecuteID" type="xs:int" />
+        <xs:element minOccurs="0" name="ExecuteStatus" type="xs:int" />
+        <xs:element minOccurs="0" name="StartTime" nillable="true" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="EndTime" nillable="true" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCraftsProcessByExIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="UpdateCraftsProcessByExIDResult" nillable="true" type="q21:CommonResultOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPersonByPerCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="PerCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPersonByPerCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="GetPersonByPerCodeResult" nillable="true" type="q22:CommonResultOfPersondYMi5huk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevStatusByCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DevCode" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDevStatusByCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="GetDevStatusByCodeResult" nillable="true" type="q23:CommonResultOfDeviceWorkingConditiondYMi5huk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDevWStatusByCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="DevCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="WorkingStatus" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateDevWStatusByCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="UpdateDevWStatusByCodeResult" nillable="true" type="q24:CommonResultOfDeviceWorkingConditiondYMi5huk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Getvw_DurmsUpFeedingByLnum">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="LicenseNum" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Getvw_DurmsUpFeedingByLnumResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="Getvw_DurmsUpFeedingByLnumResult" nillable="true" type="q25:CommonResultOfvw_DurmsUpFeedingdYMi5huk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllIPRegistForm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllIPRegistFormResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="GetAllIPRegistFormResult" nillable="true" type="q26:CommonResultOfArrayOfIPRegistFormdYMi5huk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsterRegistForm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/LY.MES.Model" minOccurs="0" name="model" nillable="true" type="q27:IPRegistForm" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsterRegistFormResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="InsterRegistFormResult" nillable="true" type="q28:CommonResultOfIPRegistFormdYMi5huk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateRegistForm">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/LY.MES.Model" minOccurs="0" name="model" nillable="true" type="q29:IPRegistForm" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateRegistFormResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="UpdateRegistFormResult" nillable="true" type="q30:CommonResultOfIPRegistFormdYMi5huk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteRegistFormById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/LY.MES.Model" minOccurs="0" name="model" nillable="true" type="q31:IPRegistForm" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteRegistFormByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="DeleteRegistFormByIdResult" nillable="true" type="q32:CommonResultOfIPRegistFormdYMi5huk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArrCuteByArrCode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ArrangedVouchCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ExecuteOrder" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetArrCuteByArrCodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="GetArrCuteByArrCodeResult" nillable="true" type="q33:CommonResultOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsterCraProDataById">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ProPlanNum" nillable="true" type="xs:string" />
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/LY.MES.Model" minOccurs="0" name="model" nillable="true" type="q34:vw_DurmsUpFeeding" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsterCraProDataByIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="InsterCraProDataByIdResult" nillable="true" type="q35:CommonResultOfboolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCraftsProcessData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="sessionId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="ProPlanNum" nillable="true" type="xs:string" />
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/LY.MES.Model" minOccurs="0" name="model" nillable="true" type="q36:vw_DurmsUpFeeding" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateCraftsProcessDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/Server.Utility" minOccurs="0" name="UpdateCraftsProcessDataResult" nillable="true" type="q37:CommonResultOfCraftsProcessExecutedYMi5huk" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

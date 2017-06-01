@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="87e392ff-6a39-47ed-a925-4290767833d4" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:16498/DataColl/DevExecuteService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="DevExecuteService.disco" MetadataType="Disco" ID="fa0a461d-2939-48e2-83d3-437e56850ed8" SourceId="1" SourceUrl="http://localhost:16498/DataColl/DevExecuteService.svc?disco" />
+    <MetadataFile FileName="DevExecuteService.xsd" MetadataType="Schema" ID="3ed5cf80-110a-4a6b-9161-3c7482f038e9" SourceId="1" SourceUrl="http://localhost:16498/DataColl/DevExecuteService.svc?xsd=xsd5" />
+    <MetadataFile FileName="DevExecuteService1.xsd" MetadataType="Schema" ID="e0c0906e-0002-4363-b3c8-c7ef73dfc1a3" SourceId="1" SourceUrl="http://localhost:16498/DataColl/DevExecuteService.svc?xsd=xsd4" />
+    <MetadataFile FileName="DevExecuteService2.xsd" MetadataType="Schema" ID="45ef2512-9879-4083-b5d2-84f1676d6495" SourceId="1" SourceUrl="http://localhost:16498/DataColl/DevExecuteService.svc?xsd=xsd3" />
+    <MetadataFile FileName="DevExecuteService3.xsd" MetadataType="Schema" ID="a79c9795-aced-4ec8-b2b5-46f598ff262d" SourceId="1" SourceUrl="http://localhost:16498/DataColl/DevExecuteService.svc?xsd=xsd2" />
+    <MetadataFile FileName="DevExecuteService.wsdl" MetadataType="Wsdl" ID="798af232-7ac4-4891-a365-7cf5f261449d" SourceId="1" SourceUrl="http://localhost:16498/DataColl/DevExecuteService.svc?wsdl" />
+    <MetadataFile FileName="DevExecuteService4.xsd" MetadataType="Schema" ID="956710d1-c488-4ccf-a4a5-0774eacf789e" SourceId="1" SourceUrl="http://localhost:16498/DataColl/DevExecuteService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DevExecuteService5.xsd" MetadataType="Schema" ID="4fb877ed-ea0b-4633-b81d-1d6a48ae6a2c" SourceId="1" SourceUrl="http://localhost:16498/DataColl/DevExecuteService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

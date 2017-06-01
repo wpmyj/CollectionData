@@ -1,0 +1,7 @@
+D:\svn\MES\CODE\LY.DeveCollection\DevCollDataSynchronize\bin\Debug\DevCollDataSynchronize.dll
+D:\svn\MES\CODE\LY.DeveCollection\DevCollDataSynchronize\bin\Debug\DevCollDataSynchronize.pdb
+D:\svn\MES\CODE\LY.DeveCollection\DevCollDataSynchronize\bin\Debug\DevCollDataSynchronize.tlb
+D:\svn\MES\CODE\LY.DeveCollection\DevCollDataSynchronize\bin\Debug\System.Web.Services.dll
+D:\svn\MES\CODE\LY.DeveCollection\DevCollDataSynchronize\bin\Debug\System.Xml.dll
+D:\svn\MES\CODE\LY.DeveCollection\DevCollDataSynchronize\obj\Debug\DevCollDataSynchronize.dll
+D:\svn\MES\CODE\LY.DeveCollection\DevCollDataSynchronize\obj\Debug\DevCollDataSynchronize.pdb

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Server.Utility" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Server.Utility" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:16498/DataColl/DevExecuteService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/LY.MES.Model" />
+  <xs:complexType name="CommonResultOfArrayOfDeviceExecutedYMi5huk">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="CommonResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Server.Utility" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfDeviceExecute" Namespace="http://schemas.datacontract.org/2004/07/LY.MES.Model" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/LY.MES.Model" minOccurs="0" name="Data" nillable="true" type="q1:ArrayOfDeviceExecute" />
+      <xs:element minOccurs="0" name="ErrorCode" type="xs:int" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StackTrace" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalNum" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CommonResultOfArrayOfDeviceExecutedYMi5huk" nillable="true" type="tns:CommonResultOfArrayOfDeviceExecutedYMi5huk" />
+  <xs:complexType name="CustomFaultMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ErrorCode" type="xs:int" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StackTrace" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CustomFaultMessage" nillable="true" type="tns:CustomFaultMessage" />
+  <xs:complexType name="CommonResultOfArrayOfV_DV_DevExecutedYMi5huk">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="CommonResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Server.Utility" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="ArrayOfV_DV_DevExecute" Namespace="http://schemas.datacontract.org/2004/07/LY.MES.Model" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/LY.MES.Model" minOccurs="0" name="Data" nillable="true" type="q2:ArrayOfV_DV_DevExecute" />
+      <xs:element minOccurs="0" name="ErrorCode" type="xs:int" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StackTrace" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalNum" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CommonResultOfArrayOfV_DV_DevExecutedYMi5huk" nillable="true" type="tns:CommonResultOfArrayOfV_DV_DevExecutedYMi5huk" />
+  <xs:complexType name="CommonResultOfV_DV_DevExecutedYMi5huk">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="CommonResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Server.Utility" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="V_DV_DevExecute" Namespace="http://schemas.datacontract.org/2004/07/LY.MES.Model" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/LY.MES.Model" minOccurs="0" name="Data" nillable="true" type="q3:V_DV_DevExecute" />
+      <xs:element minOccurs="0" name="ErrorCode" type="xs:int" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StackTrace" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalNum" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CommonResultOfV_DV_DevExecutedYMi5huk" nillable="true" type="tns:CommonResultOfV_DV_DevExecutedYMi5huk" />
+  <xs:complexType name="CommonResultOfDeviceExecutedYMi5huk">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="CommonResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Server.Utility" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="DeviceExecute" Namespace="http://schemas.datacontract.org/2004/07/LY.MES.Model" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/LY.MES.Model" minOccurs="0" name="Data" nillable="true" type="q4:DeviceExecute" />
+      <xs:element minOccurs="0" name="ErrorCode" type="xs:int" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StackTrace" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalNum" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CommonResultOfDeviceExecutedYMi5huk" nillable="true" type="tns:CommonResultOfDeviceExecutedYMi5huk" />
+  <xs:complexType name="CommonResultOfboolean">
+    <xs:annotation>
+      <xs:appinfo>
+        <GenericType Name="CommonResultOf{0}{#}" Namespace="http://schemas.datacontract.org/2004/07/Server.Utility" xmlns="http://schemas.microsoft.com/2003/10/Serialization/">
+          <GenericParameter Name="boolean" Namespace="http://www.w3.org/2001/XMLSchema" />
+        </GenericType>
+      </xs:appinfo>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Data" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ErrorCode" type="xs:int" />
+      <xs:element minOccurs="0" name="IsSuccess" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Message" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StackTrace" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TotalNum" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CommonResultOfboolean" nillable="true" type="tns:CommonResultOfboolean" />
+</xs:schema>
